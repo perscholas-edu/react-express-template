@@ -78,7 +78,7 @@ app.listen(port, funcToRunUponListening);
 
 ### Part 2.1 - Install `create-react-app` command line operation
 * `npm i -g create-react-app`
-    * 
+
 
 ### Part 2.2 - Create React application
 * `create-react-app client`
