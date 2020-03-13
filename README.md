@@ -12,7 +12,7 @@
 
 
 ### Part 1 - Dependency Management & File Infrastructure
-* Create reactexpress directory
+* Create project directory
     * `mkdir reactexpress-template`
 * Navigate to newly created directory
     * `mkdir reactexpress-template`
@@ -63,8 +63,17 @@ app.listen(port, funcToRunUponListening);
 
 ### Part 4 - Running and Viewing the application
 * To run the application, execute `npm run server`.
-* Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server
+    * This works because of the `script` added in the `package.json`.
+* Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
+* The `JSON` below is indicative of the expected render from the browser.
 
+```javascript
+[{id:1, firstName:'John',lastName:'Doe'},
+{id:2, firstName:'Ischa',lastName:'Boul'},
+{id:3, firstName:'Dark',lastName:'Mon'}]
+```
+
+### Part 5 - 
 
 
 _This application is based on a youtube tutorial which can be found [here](https://www.youtube.com/watch?v=v0t42xBIYIs)._
