@@ -83,7 +83,12 @@ app.listen(port, funcToRunUponListening);
 ### Part 2.2 - Create React application
 * To generate a new React application named `client`, execute the following cli command 
     * `create-react-app client`
-* _there is a potential for this to fail on Windows OS. Please see the `Help` section below._
+* _there is a potential for this to fail on Windows OS. Please see the section below._
+    1. if the cli command `create-react-app client` fails, try the following 
+        * `npx create-react-app my-app`
+    2. if the cli command `npx create-react-app my-app` fails, try the following 
+        * `npm init react-app my-app`
+    3. if suggestions `1` and `2` both fail, please visit the link [here](https://github.com/facebook/create-react-app/issues/6512).
 
 
 ### Part 2.3 - Modify `client/package.json`
@@ -131,15 +136,6 @@ app.listen(port, funcToRunUponListening);
 
 
 
-
-## Help
-
-### Part 2.2 - Create React application
-1. if the cli command `create-react-app client` fails, try the following 
-    * `npx create-react-app my-app`
-2. if the cli command `npx create-react-app my-app` fails, try the following 
-    * `npm init react-app my-app`
-3. if suggestions `1` and `2` both fail, please visit the link [here](https://github.com/facebook/create-react-app/issues/6512).
 
 
 
