@@ -7,7 +7,7 @@
 * Create project directory
     * `mkdir reactexpress-template`
 * Navigate to newly created directory
-    * `mkdir reactexpress-template`
+    * `cd reactexpress-template`
 * Open in text editor
     * `code .` (_Visual Studio Code_)
 * Create `server.js` file for Express server.
@@ -23,7 +23,7 @@
         * _Runs application and watches for development so that it auto-updates upon change._
 
 ### Part 1.2 - Modify the `package.json` file
-```
+```json
 "script" : {
     "start": "node server.js",
     "server": "nodemon server.js"
