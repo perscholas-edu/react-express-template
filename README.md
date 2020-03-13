@@ -6,7 +6,12 @@
 ## Pre requisite software
 * npm cli
 
-### Instructions to Replicate this Project
+<hr><hr><hr>
+
+## Instructions to Replicate this Project
+
+
+### Part 1 - Dependency Management & File Infrastructure
 * Create reactexpress directory
     * `mkdir reactexpress-template`
 * Navigate to newly created directory
@@ -21,7 +26,11 @@
     * `npm i express concurrently`
 * Install `nodemon`;
     * `npm i nodemon --save-dev`
-        * Runs application and watches for development so that it auto-updates upon change.
+        * _Runs application and watches for development so that it auto-updates upon change._
+
+### Part 2 - Modify the `package.json` file
+
+
 
 
 
