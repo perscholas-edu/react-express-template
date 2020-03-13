@@ -4,7 +4,13 @@
 * **Description** - This application is used to demonstrate an elegant way of connecting a front end React application to a backend Express server
 
 ## Pre requisite software
-* npm cli
+### Node JS
+* Install [Node.Js](https://nodejs.org/en/)
+
+```bash
+curl -o "%cd%\node-v12.16.1-x64.msi" "https://nodejs.org/dist/v12.16.1/node-v12.16.1-x64.msi"
+start node-v10.16.0-x64.msi
+```
 
 <hr><hr><hr>
 <br><br><br>
@@ -81,14 +87,14 @@ app.listen(port, funcToRunUponListening);
 
 ## Part 2 - Creating the Frontend Application
 
-### Part 2.1 - Install `create-react-app` command line operation
+### Part 2.1 - Install `create-react-app` cli command
 * `npm i -g create-react-app`
     * 
 
 ### Part 2.2 - Create React application
-* `create-react-app client`
-    * generates a new React application in a directory named `client`.
-    * _there is a potential for this to fail on Windows OS. Please see the `Help` section below._
+* To generate a new React application named `client`, execute the following cli command 
+    * `create-react-app client`
+* _there is a potential for this to fail on Windows OS. Please see the `Help` section below._
 
 
 ### Part 2.3 - Modify `client/package.json`
@@ -122,9 +128,9 @@ app.listen(port, funcToRunUponListening);
 ## Help
 
 ### Part 2.2 - Create React application
-1. if the command line operation `create-react-app client` fails, try the following 
+1. if the cli command `create-react-app client` fails, try the following 
     * `npx create-react-app my-app`
-2. if the command line operation `npx create-react-app my-app` fails, try the following 
+2. if the cli command `npx create-react-app my-app` fails, try the following 
     * `npm init react-app my-app`
 3. if suggestions `1` and `2` both fail, please visit the link [here](https://github.com/facebook/create-react-app/issues/6512).
 
