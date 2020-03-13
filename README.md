@@ -19,7 +19,7 @@
 * Open in text editor
     * `code .` (_Visual Studio Code_)
 * Create `server.js` file for Express server.
-    * `touch server.js*`
+    * `touch server.js`
 * Create `package.json` file
     * `npm init`
         * Description - React Express Template
@@ -61,7 +61,7 @@ app.listen(port, funcToRunUponListening);
 ```
 
 
-### Part 4 - Running and Viewing the application
+### Part 4 - Running Server and _Hitting_ Endpoint
 * To run the application, execute `npm run server`.
     * This works because of the `script` added in the `package.json`.
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
