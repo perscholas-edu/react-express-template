@@ -1,6 +1,5 @@
 # React & Express Starter Pack Creation
-* **Objective** - To create a React and Express project-template
-* **Purpose** - To make accessible a reusble template for creating new React & Express applications.
+* **Purpose** - To create a reusble template for creating new React & Express applications.
 * **Description** - This application is used to demonstrate an elegant way of connecting a front end React application to a backend Express server
 
 ## Pre requisite software
@@ -71,8 +70,13 @@ app.listen(port, funcToRunUponListening);
 
 
 ### Part 1.4 - Running Server and _Hitting_ Endpoint
+* Before running the application, you may want to kill any process occupying port `5000`.
+    * In windows, execute the following command
+        * `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
+    * In OSX / Linux, execute the following command
+        * ``kill -kill `lsof -t -i tcp:5000` ``
+
 * To run the application, execute `npm run server`.
-    * This works because of the `script` added in the `package.json`.
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
 * The `JSON` below is indicative of the expected render from the browser.
 
