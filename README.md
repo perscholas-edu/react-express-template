@@ -88,6 +88,7 @@ app.listen(port, funcToRunUponListening);
 ### Part 2.2 - Create React application
 * `create-react-app client`
     * generates a new React application in a directory named `client`.
+    * _there is a potential for this to fail on Windows OS. Please see the `Help` section below._
 
 
 ### Part 2.3 - Modify `client/package.json`
@@ -114,6 +115,19 @@ app.listen(port, funcToRunUponListening);
 ### Part 2.5 - Creating Customers component
 * Create `client/components/customers/customers.js`
 * Create `client/components/customers/customers.css`
+
+
+
+
+## Help
+
+### Part 2.2 - Create React application
+1. if the command line operation `create-react-app client` fails, try the following 
+    * `npx create-react-app my-app`
+2. if the command line operation `npx create-react-app my-app` fails, try the following 
+    * `npm init react-app my-app`
+3. if suggestions `1` and `2` both fail, please visit the link [here](https://github.com/facebook/create-react-app/issues/6512).
+
 
 
 _This application is based on a youtube tutorial which can be found [here](https://www.youtube.com/watch?v=v0t42xBIYIs)._
