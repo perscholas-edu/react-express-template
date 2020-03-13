@@ -28,7 +28,10 @@
   * clone the project by executing the following command:
     * `git clone https://github.com/MYUSERNAME/NAMEOFPROJECT`
 
-#### Part 4 - Killing Processes Occupying Ports
+
+## How to Run Application
+
+#### Part 1 - Killing Processes Occupying Ports
 * Your application may fail to run because something is occupying a port, use the commands below to kill any process potentially occupying our ports:
     * **OSX and Linux**
 	    * ``kill -kill `lsof -t -i tcp:5000` ``
@@ -38,14 +41,13 @@
         * `for /f "tokens=5" %a in ('netstat -aon ^| find ":3000" ^| find "LISTENING"') do taskkill /f /pid %a`
 
 
-#### Part 4 - Running Express Server
+#### Part 2 - Running Express Server
 * From the root directory of this project, execute `npm run server`.
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
 
-#### Part 5 - Running React Application
-* `cd client`
-* `npm start`
-* Navigate to `localhost:3000` to view the application
+#### Part 3 - Running React Application
+* From the root directory of this project execute `npm start ./client`.
+* Navigate to `localhost:3000` to view the the ReactJS application.
 
 
 
