@@ -12,8 +12,9 @@ curl -o "%cd%\node-v12.16.1-x64.msi" "https://nodejs.org/dist/v12.16.1/node-v12.
 start node-v12.16.1-x64.msi
 ```
 
-<hr><hr><hr>
+<hr><hr>
 <br><br><br>
+<hr><hr>
 
 ## Instructions to Replicate this Project
 
@@ -83,13 +84,13 @@ app.listen(port, funcToRunUponListening);
 
 <hr><hr>
 <br><br><br>
+<hr><hr>
 
 
 ## Part 2 - Creating the Frontend Application
 
 ### Part 2.1 - Install `create-react-app` cli command
 * `npm i -g create-react-app`
-    * 
 
 ### Part 2.2 - Create React application
 * To generate a new React application named `client`, execute the following cli command 
@@ -103,7 +104,7 @@ app.listen(port, funcToRunUponListening);
 "scripts" : {
     ...
 },
-"proxy": "http://localhost:5000"
+"proxy": "http://localhost:5000",
 ```
 
 
@@ -118,9 +119,27 @@ app.listen(port, funcToRunUponListening);
 * `npm start`
     * runs application on localhost:3000
 
-### Part 2.5 - Creating Customers component
-* Create `client/components/customers/customers.js`
-* Create `client/components/customers/customers.css`
+
+## Part 3 - Creating Customers components
+### Part 3.1 - Creating `components` directory
+* Create a `components` directory by executing the command below
+    * `mkdir ./components`
+* The purpose of this directory is ...
+
+### Part 3.2 - Creating `customers` directory
+* Create a `customers` directory by executing the command below
+    * `mkdir ./components/customers`
+* The purpose of this directory is ...
+
+
+
+### Part 3.3 - Creating `customers.js`
+* Create `customers.js` by executing the command below
+    * `touch client/components/customers/customers.js`
+
+### Part 3.4 - Creating `customers.css`
+* Create `customers.css` by executing the command below
+    * `touch client/components/customers/customers.css`
 
 
 
