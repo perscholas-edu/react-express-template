@@ -85,7 +85,7 @@ app.listen(port, funcToRunUponListening);
     * generates a new React application in a directory named `client`.
 
 
-### Part 2.3 Modify `client/package.json`
+### Part 2.3 - Modify `client/package.json`
 
 ```JSON
 "scripts" : {
@@ -94,8 +94,21 @@ app.listen(port, funcToRunUponListening);
 "proxy": "http://localhost:5000"
 ```
 
+
 * allows us to make requests to backend without having to include full URL in fetch request
     * Enables expressions like `fetch('/api/customers')`
     * Eliminates redundant uri usage like `fetch('http://localhost:5000/api/customers')`
+
+
+
+### Part 2.4 - Running React Server
+* `cd client`
+* `npm start`
+    * runs application on localhost:3000
+
+### Part 2.5 - Creating Customers component
+* Create `client/components/customers/customers.js`
+* Create `client/components/customers/customers.css`
+
 
 _This application is based on a youtube tutorial which can be found [here](https://www.youtube.com/watch?v=v0t42xBIYIs)._
