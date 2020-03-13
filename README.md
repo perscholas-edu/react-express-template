@@ -19,4 +19,4 @@ start node-v12.16.1-x64.msi
     3. point the new `.git` folder to your new remote via `git remote set-url`.
 * After reconfiguring remote, open the project in a text editor (VSCode, IntelliJ, SublimeText, Atom, etc.)
 * Ensure that the `artifactId` of the project is changed from `spring-template-project` to a more appropriate project name.
-* Click view the [`README-sample.md`](./README-Sample.md) to view _how_ a `README` should be structured for a project.
+* Click view the [`README-sample.md`](./README-sample.md) to view _how_ a `README` should be structured for a project.
