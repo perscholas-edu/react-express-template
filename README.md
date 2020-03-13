@@ -74,6 +74,9 @@ app.listen(port, funcToRunUponListening);
 {id:3, firstName:'Dark',lastName:'Mon'}]
 ```
 
+<hr><hr>
+<br><br><br>
+
 
 ## Part 2 - Creating the Frontend Application
 
