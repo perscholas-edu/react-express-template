@@ -11,7 +11,7 @@
 ## Instructions to Replicate this Project
 
 
-### Part 1 - Dependency Management & File Infrastructure
+### Part 1.1 - Dependency Management & File Infrastructure
 * Create project directory
     * `mkdir reactexpress-template`
 * Navigate to newly created directory
@@ -30,7 +30,7 @@
     * `npm i nodemon --save-dev`
         * _Runs application and watches for development so that it auto-updates upon change._
 
-### Part 2 - Modify the `package.json` file
+### Part 1.2 - Modify the `package.json` file
 ```
 "script" : {
     "start": "node server.js",
@@ -40,7 +40,7 @@
 * `"start" : "node server.js"` will call `node`, then call the `server.js` _entry point_
 * `"server": "nodemon server.js"` will use nodemon to watch for changes.
 
-### Part 3 - Modify the `server.js` file
+### Part 1.3 - Modify the `server.js` file
 
 ```javascript
 const express = require('express');  // import express
@@ -61,19 +61,41 @@ app.listen(port, funcToRunUponListening);
 ```
 
 
-### Part 4 - Running Server and _Hitting_ Endpoint
+### Part 1.4 - Running Server and _Hitting_ Endpoint
 * To run the application, execute `npm run server`.
     * This works because of the `script` added in the `package.json`.
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
 * The `JSON` below is indicative of the expected render from the browser.
 
-```javascript
+```JSON
 [{id:1, firstName:'John',lastName:'Doe'},
 {id:2, firstName:'Ischa',lastName:'Boul'},
 {id:3, firstName:'Dark',lastName:'Mon'}]
 ```
 
-### Part 5 - 
 
+## Part 2 - Creating the Frontend Application
+
+### Part 2.1 - Install `create-react-app` command line operation
+* `npm i -g create-react-app`
+    * 
+
+### Part 2.2 - Create React application
+* `create-react-app client`
+    * generates a new React application in a directory named `client`.
+
+
+### Part 2.3 Modify `client/package.json`
+
+```JSON
+"scripts" : {
+    ...
+},
+"proxy": "http://localhost:5000"
+```
+
+* allows us to make requests to backend without having to include full URL in fetch request
+    * Enables expressions like `fetch('/api/customers')`
+    * Eliminates redundant uri usage like `fetch('http://localhost:5000/api/customers')`
 
 _This application is based on a youtube tutorial which can be found [here](https://www.youtube.com/watch?v=v0t42xBIYIs)._
