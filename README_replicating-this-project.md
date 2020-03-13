@@ -91,7 +91,7 @@ app.listen(port, funcToRunUponListening);
     3. if suggestions `1` and `2` both fail, please visit the link [here](https://github.com/facebook/create-react-app/issues/6512).
 
 
-### Part 2.3 - Modify `client/package.json`
+### Part 2.3 - Modify `client/package.json` to include `proxy` to backend
 
 ```JSON
 "scripts" : {
@@ -101,39 +101,44 @@ app.listen(port, funcToRunUponListening);
 ```
 
 
-* allows us to make requests to backend without having to include full URL in fetch request
-    * Enables expressions like `fetch('/api/customers')`
-    * Eliminates redundant uri usage like `fetch('http://localhost:5000/api/customers')`
+* `proxy` key allows us to make requests to backend without having to include full URL in fetch request
+    * Enables expressions like
+        * `fetch('/api/customers')`
+        * `fetch('/api/customers/1')`
+    * Eliminates redundant uri usage like
+        * `fetch('http://localhost:5000/api/customers')`
+        * `fetch('http://localhost:5000/api/customers/1')`
 
 
 
 ### Part 2.4 - Running React Server
-* `cd client`
-* `npm start`
-    * runs application on localhost:3000
+* From the root directory of this project execute `npm start ./client`.
+* Navigate to `localhost:3000` to view the the ReactJS application.
 
 
 ## Part 3 - Creating Customers components
 ### Part 3.1 - Creating `components` directory
 * Create a `components` directory by executing the command below
     * `mkdir ./components`
-* The purpose of this directory is ...
+* The purpose of this directory is to containerize all _components_ to be created
+    * A component is typically a single _web-element_, with its own _style_, and potentially _javascript_.
 
 ### Part 3.2 - Creating `customers` directory
 * Create a `customers` directory by executing the command below
     * `mkdir ./components/customers`
-* The purpose of this directory is ...
+* The purpose of this directory is to containerize the `customer` webelement implementation.
 
 
 
 ### Part 3.3 - Creating `customers.js`
 * Create `customers.js` by executing the command below
     * `touch client/components/customers/customers.js`
+* The purpose of this file is to containerize the _view_ of the `customer` webelement
 
 ### Part 3.4 - Creating `customers.css`
 * Create `customers.css` by executing the command below
     * `touch client/components/customers/customers.css`
-
+* The purpose of this file is to containerize the _style_ of the _view_ of the `customer` webelement.
 
 
 
