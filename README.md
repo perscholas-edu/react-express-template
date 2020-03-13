@@ -18,6 +18,8 @@
     * `mkdir reactexpress-template`
 * Open in text editor
     * `code .` (_Visual Studio Code_)
+* Create `server.js` file for Express server.
+    * `touch server.js*`
 * Create `package.json` file
     * `npm init`
         * Description - React Express Template
@@ -29,8 +31,34 @@
         * _Runs application and watches for development so that it auto-updates upon change._
 
 ### Part 2 - Modify the `package.json` file
+```
+"script" : {
+    "start": "node server.js"
+    "server": "nodemon server.js"
+}
+```
+* `"start" : "node server.js"` will call `node`, then call the `server.js` _entry point_
+* `"server": "nodemon server.js"` will use nodemon to watch for changes.
 
+### Part 3 - Modify the `server.js` file
 
+```
+const express = require('express');
+const app = express();
+const port = 5000;
+app.get('/api/customers', (req, res) => {
+    const customers = [
+        {id:1, firstName:'John',lastName:'Doe'}
+        {id:2, firstName:'Mike',lastName:'Pel'}
+        {id:3, firstName:'Dark',lastName:'Mon'}
+    ];
+    res.json(customers);
+})
+
+app.listen(port, () => console.log(`Server started on port ${port}`));
+```
+
+* Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server
 
 
 
