@@ -33,7 +33,7 @@
 ### Part 2 - Modify the `package.json` file
 ```
 "script" : {
-    "start": "node server.js"
+    "start": "node server.js",
     "server": "nodemon server.js"
 }
 ```
@@ -42,22 +42,27 @@
 
 ### Part 3 - Modify the `server.js` file
 
-```
-const express = require('express');
-const app = express();
-const port = 5000;
-app.get('/api/customers', (req, res) => {
-    const customers = [
-        {id:1, firstName:'John',lastName:'Doe'}
-        {id:2, firstName:'Mike',lastName:'Pel'}
+```javascript
+const express = require('express');  // import express
+const app = express(); // initialize express
+const port = 5000; // create port variable to listen on
+const funcToRunUponListening = () => console.log(`Server started on port ${port}`);
+const funcToRunUponReceivingRequest = (req, res) => {
+    const customers = [ // TODO - replace with call to Database
+        {id:1, firstName:'John',lastName:'Doe'},
+        {id:2, firstName:'Ischa',lastName:'Boul'},
         {id:3, firstName:'Dark',lastName:'Mon'}
     ];
     res.json(customers);
-})
+};
 
-app.listen(port, () => console.log(`Server started on port ${port}`));
+app.get('/api/customers', funcToRunUponReceivingRequest)
+app.listen(port, funcToRunUponListening);
 ```
 
+
+### Part 4 - Running and Viewing the application
+* To run the application, execute `npm run server`.
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server
 
 
