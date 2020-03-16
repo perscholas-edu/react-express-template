@@ -128,6 +128,38 @@ app.listen(port, funcToRunUponListening);
     * `mkdir ./components/customers`
 * The purpose of this directory is to containerize the `customer` webelement implementation.
 
+```javascript
+import React, { Component } from 'react';
+import './customers.css';
+
+class Customers extends Component {
+    constuctor() {
+        super();
+        this.state = {
+            customers:[]
+        }
+    }
+
+// runs automatically when component is mounted
+// fetches customers from express server and sets `state`-value to customers that were fetched
+    componentDidMount() {
+        fetch('/api/customers')
+            .then(res => res.json())
+            .then(customers => this.setState({customers}, () => console.log("Customers fetched...", customers)))
+    }
+
+    render() {
+        return (
+            <div>
+                Customers   
+            </div>
+        );
+    }
+}
+
+export default Customers;
+```
+
 
 
 ### Part 3.3 - Creating `customers.js`
