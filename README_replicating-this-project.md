@@ -65,9 +65,9 @@ app.listen(port, funcToRunUponListening);
 * The `JSON` below is indicative of the expected render from the browser.
 
 ```JSON
-[{id:1, firstName:'John',lastName:'Doe'},
-{id:2, firstName:'Ischa',lastName:'Boul'},
-{id:3, firstName:'Dark',lastName:'Mon'}]
+[{"id":1, "firstName":"Ralph","lastName":"Jacob"},
+ {"id":2, "firstName":"Mark","lastName":"Lauren"},
+ {"id":3, "firstName":"Ischa","lastName":"Boul"}]
 ```
 
 <hr><hr>
@@ -94,10 +94,13 @@ app.listen(port, funcToRunUponListening);
 ### Part 2.3 - Modify `client/package.json` to include `proxy` to backend
 
 ```JSON
-"scripts" : {
-    ...
-},
-"proxy": "http://localhost:5000",
+{ 
+    ...,
+    "scripts" : {
+        ...,
+    },
+    "proxy": "http://localhost:5000",
+    ...,
 ```
 
 
