@@ -101,6 +101,7 @@ app.listen(port, funcToRunUponListening);
     },
     "proxy": "http://localhost:5000",
     ...,
+}
 ```
 
 
