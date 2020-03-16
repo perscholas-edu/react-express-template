@@ -54,9 +54,9 @@ app.listen(port, funcToRunUponListening);
 
 
 ### Part 1.4 - Running Server and _Hitting_ Endpoint
-* Before running the application, you may want to kill any process occupying port `5000`.
+* _Before running the application, you may want to kill any process occupying port `5000`._
     * In windows, execute the following command
-        * `for /f "tokens=5" %a in ('netstat -aon ^| find ":8080" ^| find "LISTENING"') do taskkill /f /pid %a`
+        * `for /f "tokens=5" %a in ('netstat -aon ^| find ":5000" ^| find "LISTENING"') do taskkill /f /pid %a`
     * In OSX / Linux, execute the following command
         * ``kill -kill `lsof -t -i tcp:5000` ``
 
@@ -128,6 +128,12 @@ app.listen(port, funcToRunUponListening);
     * `mkdir ./components/customers`
 * The purpose of this directory is to containerize the `customer` webelement implementation.
 
+
+### Part 3.3 - Creating `customers.js`
+* Create `customers.js` by executing the command below
+    * `touch client/components/customers/customers.js`
+* The purpose of this file is to containerize the _view_ of the `customer` webelement
+
 ```javascript
 import React, { Component } from 'react';
 import './customers.css';
@@ -140,10 +146,10 @@ class Customers extends Component {
         }
     }
 
-// runs automatically when component is mounted
-// fetches customers from express server and sets `state`-value to customers that were fetched
-    componentDidMount() {
-        fetch('/api/customers')
+    
+
+    componentDidMount() { // runs automatically when component is mounted
+        fetch('/api/customers') // fetches customers from express server and sets `state`-value to customers that were fetched
             .then(res => res.json())
             .then(customers => this.setState({customers}, () => console.log("Customers fetched...", customers)))
     }
@@ -160,12 +166,6 @@ class Customers extends Component {
 export default Customers;
 ```
 
-
-
-### Part 3.3 - Creating `customers.js`
-* Create `customers.js` by executing the command below
-    * `touch client/components/customers/customers.js`
-* The purpose of this file is to containerize the _view_ of the `customer` webelement
 
 ### Part 3.4 - Creating `customers.css`
 * Create `customers.css` by executing the command below
