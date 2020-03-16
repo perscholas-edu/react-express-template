@@ -94,14 +94,10 @@ app.listen(port, funcToRunUponListening);
 ### Part 2.3 - Modify `client/package.json` to include `proxy` to backend
 
 ```JSON
-{ 
+"scripts" : {
     ...,
-    "scripts" : {
-        ...,
-    },
-    "proxy": "http://localhost:5000",
-    ...,
-}
+},
+"proxy": "http://localhost:5000",
 ```
 
 
