@@ -24,7 +24,7 @@
 
 ### Part 1.2 - Modify the `package.json` file
 ```json
-"script" : {
+"scripts" : {
     "start": "node server.js",
     "server": "nodemon server.js"
 }
