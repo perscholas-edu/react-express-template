@@ -78,11 +78,15 @@ app.listen(port, funcToRunUponListening);
 ## Part 2 - Creating the Frontend Application
 
 ### Part 2.1 - Install `create-react-app` cli command
-* `npm i -g create-react-app`
+* `npm uninstall -g create-react-app`
+* `npm install react-scripts --save`
 
 ### Part 2.2 - Create React application
 * To generate a new React application named `client`, execute the following cli command 
     * `create-react-app client`
+    * `cd client`
+    * `npm i -g create-react-app` will fix [this issue](https://stackoverflow.com/questions/47928735/react-scripts-is-not-recognized-as-an-internal-or-external-command).
+    * `npm run-script build`
 * _there is a potential for this to fail on Windows OS. Please see the section below._
     1. if the cli command `create-react-app client` fails, try the following 
         * `npx create-react-app my-app`
