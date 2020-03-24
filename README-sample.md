@@ -35,18 +35,20 @@
 * Your application may fail to run because something is occupying a port, use the commands below to kill any process potentially occupying our ports:
     * **OSX and Linux**
 	    * ``kill -kill `lsof -t -i tcp:5000` ``
-        * ``kill -kill `lsof -t -i tcp:3000` ``
+      * ``kill -kill `lsof -t -i tcp:3000` ``
     * **Windows**
         * `for /f "tokens=5" %a in ('netstat -aon ^| find ":5000" ^| find "LISTENING"') do taskkill /f /pid %a`
         * `for /f "tokens=5" %a in ('netstat -aon ^| find ":3000" ^| find "LISTENING"') do taskkill /f /pid %a`
 
 
 #### Part 2 - Running Express Server
-* From the root directory of this project, execute `npm run server`.
+* From the root directory of this project, execute
+  * `npm run server`
 * Navigate to `localhost:5000/api/customers` to view the json being returned by the Express server.
 
 #### Part 3 - Running React Application
-* From the root directory of this project execute `npm start ./client`.
+* From the `client` directory, located in the root directory of this project, execute
+  * `npm start`
 * Navigate to `localhost:3000` to view the the ReactJS application.
 
 
