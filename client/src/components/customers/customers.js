@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './customers.css';
+
 
 class Customers extends Component {
     render() {
@@ -10,5 +11,5 @@ class Customers extends Component {
         );
     }
 }
-    
+
 export default Customers;
