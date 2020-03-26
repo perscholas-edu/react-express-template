@@ -41,10 +41,10 @@ const port = 5000; // create port variable to listen on
 const funcToRunUponListening = () => console.log(`Server started on port ${port}`);
 const funcToRunUponReceivingRequest = (req, res) => {
     const customers = [ // TODO - replace with call to Database
-        {id:1, firstName:'John',lastName:'Doe'},
-        {id:2, firstName:'Ischa',lastName:'Boul'},
-        {id:3, firstName:'Dark',lastName:'Mon'}
-    ];
+        {"id":1, "firstName":"Ischa","lastName":"Boul"},
+        {"id":2, "firstName":"Mark","lastName":"Lauren"},
+        {"id":3, "firstName":"Ralph","lastName":""}
+    ];    
     res.json(customers);
 };
 
@@ -65,9 +65,9 @@ app.listen(port, funcToRunUponListening);
 * The `JSON` below is indicative of the expected render from the browser.
 
 ```JSON
-[{"id":1, "firstName":"Ralph","lastName":"Jacob"},
+[{"id":1, "firstName":"Ischa","lastName":"Boul"},
  {"id":2, "firstName":"Mark","lastName":"Lauren"},
- {"id":3, "firstName":"Ischa","lastName":"Boul"}]
+ {"id":3, "firstName":"Ralph","lastName":"Jacob"}]
 ```
 
 <hr><hr>
