@@ -6,7 +6,7 @@ const funcToRunUponReceivingRequest = (req, res) => {
     const customers = [ // TODO - replace with call to Database
         {id:1, firstName:'John',lastName:'Doe'},
         {id:2, firstName:'Ischa',lastName:'Boul'},
-        {id:3, firstName:'Dark',lastName:'Mon'}];
+        {id:3, firstName:'Mark',lastName:'Joy'}];
         
     res.json(customers);
 };

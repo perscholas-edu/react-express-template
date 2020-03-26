@@ -148,11 +148,9 @@ class Customers extends Component {
         this.state = {
             customers:[]
         }
-    }
+    }    
 
-    
-
-    componentDidMount() { // runs automatically when component is mounted
+    componentDidMount() { // runs automatically when component is mounted to the DOM
         fetch('/api/customers') // fetches customers from express server and sets `state`-value to customers that were fetched
             .then(res => res.json())
             .then(customers => this.setState({customers}, () => console.log("Customers fetched...", customers)))
@@ -161,7 +159,12 @@ class Customers extends Component {
     render() {
         return (
             <div>
-                Customers   
+                <h2>Customers</h2>
+                <ul>{ this.state.customer.map(customer =>
+                    <li key={customer.id}>
+                        { customer.firstName } {customer.lastName}
+                    </li>
+                )}</ul>
             </div>
         );
     }
